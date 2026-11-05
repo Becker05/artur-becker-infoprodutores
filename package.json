@@ -1,0 +1,9 @@
+{
+  "name": "artur-becker-infoprodutores",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node --check assets/main.js && node --check assets/config.js"
+  }
+}
