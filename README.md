@@ -14,7 +14,7 @@ A página de obrigado só é aberta após confirmação de gravação por reques
 
 ## Mensuração
 
-contact_click é clique no CTA; diagnostico_form_start é início do formulário; generate_lead ocorre após confirmação. Dados de contato não são enviados ao dataLayer. GTM permanece desativado até configuração do container desta LP em assets/config.js. Não reutilizar o container do e-commerce automaticamente.
+contact_click é clique no CTA; diagnostico_form_start é início do formulário; generate_lead ocorre após confirmação. Dados de contato não são enviados ao dataLayer. Container GTM-M5XRQMWS instalado em index.html e obrigado.html por solicitação do proprietário. Snippet padrão no head e fallback noscript no body.
 
 ## Hospedagem
 
