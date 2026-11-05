@@ -883,3 +883,20 @@
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body.with-floating-cta{padding-bottom:calc(94px + env(safe-area-inset-bottom,0px))}.floating-cta{position:fixed;inset:auto 0 0;z-index:1000;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(23,25,26,.97);text-align:center;border-top:1px solid #454b4c;box-shadow:0 -6px 24px #0002}.floating-cta[hidden]{display:none}.floating-cta .button{width:min(100%,460px);min-height:58px}
+
+#solicitar-diagnostico {scroll-margin-top:24px;max-width:900px}
+#diagnostico-form fieldset {border:0;padding:0;margin:32px 0}
+#diagnostico-form legend {font-weight:800;line-height:1.5;margin-bottom:14px}
+.form-choice {display:flex;align-items:flex-start;gap:12px;border:1px solid var(--line);border-radius:6px;padding:16px;margin-bottom:10px;cursor:pointer;line-height:1.5}
+.form-choice:has(input:checked) {border-color:var(--orange);background:#fff7f1}
+.form-choice input {margin-top:5px;accent-color:var(--orange);flex:none;width:18px;height:18px}
+.form-contact {display:grid;gap:20px;margin-bottom:26px}
+.form-contact label {display:grid;gap:9px;font-weight:700}
+.form-contact input {width:100%;padding:15px;border:1px solid #aeb4b2;border-radius:6px;font:inherit;background:white;color:var(--ink)}
+#diagnostico-form input:focus-visible {outline:3px solid #00a6a6;outline-offset:3px}
+#diagnostico-form button {border:0;cursor:pointer;font-family:inherit}
+#diagnostico-form button:disabled {opacity:.65;cursor:wait}
+.form-trap {position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+#form-status {min-height:28px} .form-help {margin-top:0}
+
+

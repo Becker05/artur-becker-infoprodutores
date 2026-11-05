@@ -1,21 +1,21 @@
-# Rastreamento para infoprodutores — Artur Becker
+# Rastreamento para infoprodutores
 
-Página estática de geração de contatos para o serviço de implementação de rastreamento. Preserva CSS, cores e componentes do modelo aprovado.
+Página estática com formulário embutido, página de obrigado e integração Google Sheets.
 
-## Rodar
+## Executar
 
-Node.js: `npm start`; abra http://127.0.0.1:4174. Sem dependências. `npm run check` verifica sintaxe.
+Node.js: npm start. Prévia em http://127.0.0.1:4174.
 
-## Hospedar
+## Fluxo
 
-GitHub Pages: main, /(root), sem build. Domínio personalizado ainda não definido.
+Todos os CTAs levam a #solicitar-diagnostico. O formulário coleta modelo de venda, investimento, necessidades, nome, e-mail e WhatsApp. Grava em Leads Infoprodutores na mesma planilha do e-commerce, usando form_id=diagnostico_infoprodutores. A rota sem esse identificador mantém o e-commerce em Leads. O backend publicado está documentado em docs/Code.gs.
 
-## Configuração
+A página de obrigado só é aberta após confirmação de gravação por request_id. POST no-cors não é considerado confirmação. Reenvios da mesma tentativa usam o mesmo ID. Campos incluem validação, honeypot e proteção contra fórmulas na planilha.
 
-assets/config.js contém WhatsApp, mensagem e GTM opcional, inicialmente desativado. Não reutilizar o container do e-commerce sem autorização. Antes de ativar tags, configurar os requisitos de consentimento aplicáveis.
+## Mensuração
 
-O evento contact_click representa somente clique no WhatsApp. Nenhum generate_lead ou purchase é disparado pelo clique; conversa, qualificação e venda precisam de confirmação em uma integração própria. Não há formulário com armazenamento ou endpoint reaproveitado.
+contact_click é clique no CTA; diagnostico_form_start é início do formulário; generate_lead ocorre após confirmação. Dados de contato não são enviados ao dataLayer. GTM permanece desativado até configuração do container desta LP em assets/config.js. Não reutilizar o container do e-commerce automaticamente.
 
-CTA flutuante aparece quando os botões originais saem da tela. Conteúdo e mensagens podem ser editados em index.html.
+## Hospedagem
 
-Pesquisa e critérios editoriais: docs/pesquisa.md.
+GitHub Pages, main, raiz. Domínio lpi.souarturbecker.com.br.
